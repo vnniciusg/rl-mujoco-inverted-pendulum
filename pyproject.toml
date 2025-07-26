@@ -1,7 +1,7 @@
 [project]
 name = "rl-mujoco-inverted-pendulum"
 version = "0.1.0"
-description = "Add your description here"
+description = "Implementation of the REINFORCE algorithm for the InvertedPendulum-v5 environment using Gymnasium and PyTorch."
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
