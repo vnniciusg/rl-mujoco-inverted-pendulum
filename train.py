@@ -62,9 +62,7 @@ def plot_learning_curve(
         The plot uses seaborn styling with a dark grid theme and rainbow palette
         for better visualization of multiple training runs.
     """
-    rewards_to_plot = [
-        [reward[0] for reward in rewards] for rewards in rewards_over_seeds
-    ]
+    rewards_to_plot = [[reward for reward in rewards] for rewards in rewards_over_seeds]
     df1 = pd.DataFrame(rewards_to_plot).melt()
     df1.rename(columns={"variable": "episodes", "value": "reward"}, inplace=True)
     sns.set_theme(style="darkgrid", context="talk", palette="rainbow")
