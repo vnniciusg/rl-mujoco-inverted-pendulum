@@ -112,7 +112,7 @@ def train() -> None:
 
         env = setup_environment(
             num_eval_episodes=NUM_EPISODES,
-            video_folder=f"inverted-pendulum-seed-{seed}",
+            video_folder=f"training_videos/inverted-pendulum-seed-{seed}",
             name_prefix=f"seed-{seed}-eval",
         )
 
@@ -135,7 +135,7 @@ def train() -> None:
             agent.update()
 
             if episode % 1000 == 0:
-                logger.info(
+                tqdm.write(
                     f"EPISODE: {episode}, AVG_REWARD: {int(np.mean(env.return_queue))}"
                 )
 
